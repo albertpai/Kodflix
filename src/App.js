@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import A_City_of_Sadness from './A_City_of_Sadness.jpg';
 import Games_of_Thrones from './Games_of_Thrones.jpg';
 import House_of_Cards from './House_of_Cards.jpg';
@@ -13,12 +13,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React for the first time hellooooo thereee!!</h1>
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <h1 className="App-title">Kodflix</h1>
         </header>
-        <p className="App-intro">
+        {/* <p className="App-intro">
           These are the posters of my favourite Movies and TV shows!
-        </p>
+        </p> */}
         <div className="poster-container">
           <div className="poster-title"><img src={A_City_of_Sadness} alt="A_City_of_Sadness"/></div>
           <div className="poster-title"><img src={Games_of_Thrones} alt="Games_of_Thrones" /></div>
