@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: black;
 }
 
 .App-logo {
@@ -34,8 +35,10 @@
   align-items: stretch;
 }
 
-.poster-title{
-  font-weight: 900;
+.poster-title {
   flex: 1;
-  margin: 30px;
-}
+  }
+
+ div > img {
+  max-width: 100%;
+ }
