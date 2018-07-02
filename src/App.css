@@ -35,10 +35,20 @@
   align-items: stretch;
 }
 
-.poster-title {
-  flex: 1;
-  }
-
  div > img {
   max-width: 100%;
  }
+
+ /* For mobile phones: */
+ @media only screen and (max-width: 599px) {
+  .poster-title {
+    flex: 1 1 auto;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablet and desktop: */
+  .poster-title {
+    flex: 1 1 0;
+    }
+}
