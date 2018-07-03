@@ -23,7 +23,7 @@ class App extends Component {
           <div className="poster-image">
             <img src={A_City_of_Sadness} alt="A_City_of_Sadness"/>
             <div className="title-overlay">
-              <h1>A City of Sadness Sadness Sadness</h1>
+              <h1>A City of Sadness</h1>
             </div> 
           </div>
           <div className="poster-image">
