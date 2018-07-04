@@ -77,7 +77,7 @@ img:hover {
 
 .poster-image:hover .title-overlay {
   opacity: 1;
-  height:15%;
+  height:5rem;
   transition: height 1s;
   transition-timing-function: ease-in-out;
 }
