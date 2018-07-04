@@ -43,13 +43,12 @@
  }
 
  /* For mobile phones: */
- @media only screen and (max-width: 599px) {
-  .poster-image {
+ /* Mobile First setting */
+.poster-image {
     position: relative;
     overflow: hidden;
     flex: 1 1 auto;
     }
-}
 
 @media only screen and (min-width: 600px) {
   /* For tablet and desktop: */
