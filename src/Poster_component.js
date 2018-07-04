@@ -1,10 +1,10 @@
 import React from 'react';
 
-class yyy extends React.Component {
+class posterComponent extends React.Component {
     render () {
       return ( 
         <div className="poster-image" alt="image">
-          <img src={this.props.imageName}/>  
+          <img src={this.props.src}/>  
           <div className="title-overlay">
             <h1>{this.props.posterTitle}</h1>
           </div>
@@ -13,7 +13,7 @@ class yyy extends React.Component {
     }
 };
 
-export default yyy;
+export default posterComponent;
 
 
         //   <div className="poster-image">
