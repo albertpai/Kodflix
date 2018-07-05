@@ -1,19 +1,20 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 export default class posterComponent extends React.Component {
-    render () {
-      return ( 
-        <div className="poster-image">
-          <img src={this.props.src} alt={this.props.alt}/>  
+  render() {
+    return (
+      <div className="poster-image">
+        <Link to="/details"> 
+          <img src={this.props.src} alt={this.props.alt} />
           <div className="title-overlay">
             <label>{this.props.posterTitle}</label>
           </div>
-        </div>
-      )
-    }
+        </Link>
+      </div >
+    )
+  }
 };
-
-
 
         //   <div className="poster-image">
         //     <img src={A_City_of_Sadness} alt="A_City_of_Sadness"/>

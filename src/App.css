@@ -36,10 +36,9 @@
   position: relative;
 }
 
- div > img {
+img {
   width: 100%;
   height: 100%;
-  /* z-index: -1; */
  }
 
  /* For mobile phones: */
@@ -64,24 +63,23 @@ img:hover {
 }
 
 .title-overlay {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: white;
   position: absolute;
   bottom:0;
-  color: white;
   opacity: 0;
   background-color: black;
   text-align: center;
   box-sizing: border-box;
   width: 100%;
-  height: 0;
-  font-weight: bolder;
-  font-size: 1.5rem;
+  height: 0rem;
   padding: 1.2rem;
 }
 
 .poster-image:hover .title-overlay {
   opacity: 1;
-  height: 4rem;
+  height: 4.5rem;
   transition: height 1s;
-  transition-timing-function: ease;
+  transition-timing-function: ease-out;
 }
-
