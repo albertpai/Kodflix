@@ -21,14 +21,14 @@ export default class App extends Component {
         </header>
 
         <div className="poster-container">
-          <PosterComponent posterTitle="A City of Sadness" src={Sadness} alt={Sadness} />;
-          <PosterComponent posterTitle="Games of Thrones" src={Games} alt={Sadness} />;
-          <PosterComponent posterTitle="House of Cards" src={House} alt={Sadness} />;
+          <PosterComponent posterTitle="A City of Sadness" src={Sadness} alt={Sadness} />
+          <PosterComponent posterTitle="Games of Thrones" src={Games} alt={Sadness} />
+          <PosterComponent posterTitle="House of Cards" src={House} alt={Sadness} />
         </div>
         <div className="poster-container">
-          <PosterComponent posterTitle="Robin Hood" src={Robin} alt={Sadness} />;
-          <PosterComponent posterTitle="Sherlock" src={Sherlock} alt={Sadness} />;
-          <PosterComponent posterTitle="Breaking Bad" src={Breaking} alt={Sadness} />;
+          <PosterComponent posterTitle="Robin Hood" src={Robin} alt={Sadness} />
+          <PosterComponent posterTitle="Sherlock" src={Sherlock} alt={Sadness} />
+          <PosterComponent posterTitle="Breaking Bad" src={Breaking} alt={Sadness} />
         </div>
       </div>
     );

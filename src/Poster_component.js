@@ -3,10 +3,10 @@ import React from 'react';
 class posterComponent extends React.Component {
     render () {
       return ( 
-        <div className="poster-image" alt="image">
-          <img src={this.props.src}/>  
+        <div className="poster-image">
+          <img src={this.props.src} alt={this.props.alt}/>  
           <div className="title-overlay">
-            <h1>{this.props.posterTitle}</h1>
+            <label>{this.props.posterTitle}</label>
           </div>
         </div>
       )
