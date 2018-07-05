@@ -1,6 +1,6 @@
 import React from 'react';
 
-class posterComponent extends React.Component {
+export default class posterComponent extends React.Component {
     render () {
       return ( 
         <div className="poster-image">
@@ -13,7 +13,6 @@ class posterComponent extends React.Component {
     }
 };
 
-export default posterComponent;
 
 
         //   <div className="poster-image">
