@@ -7,35 +7,27 @@ import Robin from './Robin_Hood.jpg';
 import Sherlock from './Sherlock.jpg';
 import Breaking from './Breaking_Bad.jpg';
 
-import PosterComponent from './Poster_component.js';
+import Poster from './Poster_component.js';
 
 export default class Gallery extends React.Component {
     render() {
         return (
             <div>
-                <div className="poster-container">
-                    <PosterComponent
-                        posterTitle="A City of Sadness" 
-                        src={Sadness} 
-                        alt={Sadness} />
-                    <PosterComponent posterTitle="Games of Thrones" 
-                        src={Games} 
-                        alt={Games} />
-                    <PosterComponent posterTitle="House of Cards" 
-                        src={House} 
-                        alt={House} />
+                <div className="gallery-container">
+                    <Poster posterTitle="A City of Sadness"
+                        src={Sadness} alt={Sadness} id="a-city-of-sadness" />
+                    <Poster posterTitle="Games of Thrones"
+                        src={Games} alt={Games} id="games-of-thrones" />
+                    <Poster posterTitle="House of Cards"
+                        src={House} alt={House} id="house-of-cards" />
                 </div>
-                <div className="poster-container">
-                    <PosterComponent posterTitle="Robin Hood" 
-                    src={Robin} 
-                    alt={Robin} />
-                    <PosterComponent
-                    posterTitle="Sherlock" 
-                    src={Sherlock} 
-                    alt={Sherlock} />
-                    <PosterComponent posterTitle="Breaking Bad" 
-                    src={Breaking} 
-                    alt={Breaking} />
+                <div className="gallery-container">
+                    <Poster posterTitle="Robin Hood"
+                        src={Robin} alt={Robin} id="robin-hood" />
+                    <Poster posterTitle="Sherlock"
+                        src={Sherlock} alt={Sherlock} id="sherlock" />
+                    <Poster posterTitle="Breaking Bad"
+                        src={Breaking} alt={Breaking} id="breaking-bad" />
                 </div>
             </div>
         )
