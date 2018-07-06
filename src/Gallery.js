@@ -20,8 +20,6 @@ export default class Gallery extends React.Component {
                         src={Games} alt={Games} id="games-of-thrones" />
                     <Poster posterTitle="House of Cards"
                         src={House} alt={House} id="house-of-cards" />
-                </div>
-                <div className="gallery-container">
                     <Poster posterTitle="Robin Hood"
                         src={Robin} alt={Robin} id="robin-hood" />
                     <Poster posterTitle="Sherlock"
