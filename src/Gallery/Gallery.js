@@ -7,7 +7,9 @@ import Robin from './Robin_Hood.jpg';
 import Sherlock from './Sherlock.jpg';
 import Breaking from './Breaking_Bad.jpg';
 
-import Poster from './Poster_component.js';
+import './Gallery.css';
+
+import Poster from '../Poster/Poster.js';
 
 export default class Gallery extends React.Component {
     render() {

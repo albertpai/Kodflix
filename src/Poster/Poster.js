@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import './Poster.css';
 
 export default class posterComponent extends React.Component {
   render() {

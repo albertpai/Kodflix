@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Gallery from './Gallery.js';
+import Gallery from './Gallery/Gallery.js';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Details from './Details.js';
+import Details from './Details/Details.js';
 
 // The same as  exort defailt App;
 export default class App extends Component {
