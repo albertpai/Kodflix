@@ -5,11 +5,11 @@ import './Poster.css';
 export default class posterComponent extends React.Component {
   render() {
     return (
-      <div className="poster-image">
+      <div className="poster-container">
         <Link to={this.props.id}> 
           <img src={this.props.src} alt={this.props.alt} />
           <div className="title-overlay">
-            <label>{this.props.posterTitle}</label>
+            <label>{this.props.title}</label>
           </div>
         </Link>
       </div >
