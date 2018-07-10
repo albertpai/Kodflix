@@ -6,15 +6,15 @@ export default class Details extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            message: "Hello, this will be the details page for each Movie & TV show :)",
+            message: "Hello, this will be the details page for each Movie & TV show :)"
         }
     }
 
     componentDidMount() {
-        this.fetchData();
+        this.changeMessage();
     }
 
-    fetchData() {
+    changeMessage() {
         setTimeout(() => {this.setState({message: "Coming soon! :)"})}
         , 3000)
     }
