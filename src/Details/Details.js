@@ -22,11 +22,25 @@ export default class Details extends React.Component {
 
         let showTitle = selectedShow.title;
 
+        let showSynopsis = selectedShow.synopsis;
+
         return (
             <div>
-                <h2>
-                    {showTitle}
-                </h2>
+                <div>
+                    <h1>
+                        {showTitle}
+                    </h1>
+                </div>
+                <div className="details-container">
+                    <div className="details-item">
+                        <p>
+                            {showSynopsis}
+                        </p>
+                    </div>
+                    <div className="details-item">
+                        <img src={selectedShow.src} alt={selectedShow.alt} />
+                    </div>
+                </div>
             </div>
         )
     }
