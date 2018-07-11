@@ -1,13 +1,24 @@
 import React from 'react';
 import './Details.css';
 import galleryGet from '../Gallery/gallery-get.js';
+import { Redirect } from 'react-router';
+import NotFound from '../NotFound/NotFound.js';
 
 export default class Details extends React.Component {
 
     render() {
-        let selectedShow = galleryGet.find ((galleryGet) => {
-            return galleryGet.id === this.props.match.params.id
+
+        let urlId = this.props.match.params.id;
+
+        let selectedShow = galleryGet.find((galleryGet) => {
+            return galleryGet.id === urlId
         });
+
+        if (selectedShow === undefined) {
+            return (
+                <Redirect to="/not-found" component={NotFound} />
+            )
+        }
 
         let showTitle = selectedShow.title;
 
@@ -18,7 +29,5 @@ export default class Details extends React.Component {
                 </h2>
             </div>
         )
-    
-
     }
 };
