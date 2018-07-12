@@ -1,8 +1,7 @@
 import React from 'react';
-import './Gallery.css';
-
 import Poster from '../Poster/Poster.js';
 import galleryGet from './gallery-get.js';
+import './Gallery.css';
 
 export default class Gallery extends React.Component {
     render() {

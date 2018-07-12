@@ -1,8 +1,8 @@
 import React from 'react';
-import './Details.css';
-import galleryGet from '../Gallery/gallery-get.js';
 import { Redirect } from 'react-router';
+import galleryGet from '../Gallery/gallery-get.js';
 import NotFound from '../NotFound/NotFound.js';
+import './Details.css';
 
 export default class Details extends React.Component {
 
