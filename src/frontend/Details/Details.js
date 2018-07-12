@@ -5,25 +5,33 @@ import NotFound from '../NotFound/NotFound.js';
 import './Details.css';
 
 export default class Details extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            showKey: {}
+        }
+    }
+
+    componentDidMount() {
+        let urlId = this.props.match.params.id;
+        let showValue = galleryGet.find((select) => {
+            return select.id === urlId
+        })
+        this.setState({
+            showKey: showValue
+        })
+        window.scrollTo(0, 0)
+    }
 
     render() {
-
-        let urlId = this.props.match.params.id;
-
-        let selectedShow = galleryGet.find((galleryGet) => {
-            return galleryGet.id === urlId
-        });
-
+        let selectedShow = this.state.showKey
+        let showTitle = selectedShow.title;
+        let showSynopsis = selectedShow.synopsis;
         if (selectedShow === undefined) {
             return (
                 <Redirect to="/not-found" component={NotFound} />
             )
         }
-
-        let showTitle = selectedShow.title;
-
-        let showSynopsis = selectedShow.synopsis;
-
         return (
             <div>
                 <div>
