@@ -7,6 +7,21 @@ import NotFound from './NotFound/NotFound.js';
 
 // The same as  exort defailt App;
 export default class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { shows: [] };
+  }
+
+  componentDidMount() {
+    fetch('rest/shows')
+      .then(res => res.json())
+      .then(shows => {
+        this.setState({ shows })
+        console.log(this.state.shows)
+      })
+  }
+
   render() {
     return (
       <div className="App">
