@@ -6,8 +6,8 @@ export default class posterComponent extends React.Component {
   render() {
     return (
       <div className="poster-container">
-        <Link to={this.props.id}> 
-          <img src={this.props.src} alt={this.props.alt} />
+        <Link to={this.props.id} onClick={ () => { this.scrollToTop(); }}> 
+          <img src={this.props.src} alt={this.props.alt}/>
           <div className="title-overlay">
             <label>{this.props.title}</label>
           </div>
