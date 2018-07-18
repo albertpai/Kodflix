@@ -18,7 +18,7 @@ export default class App extends React.Component {
       .then(res => res.json())
       .then(shows => {
         this.setState({ shows })
-        console.log(this.state.shows)
+        // console.log(this.state.shows)
       })
   }
 
