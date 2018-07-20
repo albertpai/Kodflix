@@ -1,7 +1,7 @@
 var express = require('express');
+var path = require('path');
 var app = express();
 var shows = require('./rest/shows.js');
-var path = require('path');
 const port = process.env.PORT || 3001;
 
 app.get('/rest/shows', (req, res) => res.send(shows()))
@@ -14,5 +14,4 @@ app.get('*', function (req, res) {
     res.sendFile(path.join(__dirname, '../../build', 'index.html'));
 });
 
-// Listen to a pre-defined port
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`Listening on port ${port}!`))
