@@ -4,7 +4,7 @@ var app = express();
 var shows = require('./rest/shows.js');
 const port = process.env.PORT || 3001;
 
-app.get('/rest/shows', (req, res) => res.send(shows()))
+app.get('/rest/shows', (req, res) => res.send(shows()));
 
 // Serve any static files   
 app.use(express.static(path.join(__dirname, '../../build')));
