@@ -18,7 +18,7 @@ p {
     position: relative;
     padding: 1rem;
     background-color: black;
-  }
+}
 
 .details-item {
     overflow: hidden;
@@ -31,14 +31,13 @@ img {
 }
 
 @media screen and (max-width: 600px) {
-
     /* h1 {
         padding: 0rem;
     } */
 
     .details-container {
         display: block;
-        flex-direction: column
+        flex-direction: column;
     }
 
     .details-item {

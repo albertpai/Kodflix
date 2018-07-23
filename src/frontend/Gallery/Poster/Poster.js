@@ -7,7 +7,7 @@ export default class posterComponent extends React.Component {
     return (
       <div className="poster-container">
         <Link to={this.props.id}> 
-          <img src={this.props.src} alt={this.props.alt}/>
+          <img src={require(`../../common/image/${this.props.id}.jpg`)} alt={this.props.alt}/>
           <div className="title-overlay">
             <label>{this.props.title}</label>
           </div>
