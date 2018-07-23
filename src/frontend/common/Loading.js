@@ -1,11 +1,13 @@
 import React from 'react';
 import './Loading.css';
 
-export default function Loading () {
+export default function Loading() {
     return (
-        <div>
-            <h2>Loading...</h2>
+        <div className="loading-container">
+            <div>
+                <h1>Loading...</h1>
+                <div className="loader" />
+            </div>
         </div>
-    )
+    );
 }
-
