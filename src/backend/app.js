@@ -1,17 +1,30 @@
-var express = require('express');
-var path = require('path');
-var app = express();
-var shows = require('./rest/shows.js');
+const express = require('express');
+const app = express();
+const path = require('path');
+// const shows = require('./rest/shows.js');
 const port = process.env.PORT || 3001;
+const db = require('./db.js');
 
-app.get('/rest/shows', (req, res) => res.send(shows()));
+// Connect backend to database
+db.connect()
+  .then(dbObject => {
 
-// Serve any static files   
-app.use(express.static(path.join(__dirname, '../../build')));
+    app.get('/rest/shows', (req, res) => {
+      dbObject.collection('shows').find({}).toArray((err, results) => {
+        if (err) throw err;
+        res.send(results);
+      });
+    })
 
-// Handle React routing, return all requests to React app
-app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, '../../build', 'index.html'));
-});
 
-app.listen(port, () => console.log(`Listening on port ${port}!`))
+    // Serve any static files   
+    app.use(express.static(path.join(__dirname, '../../build')));
+
+    // Handle React routing, return all requests to React app
+    app.get('*', function (req, res) {
+      res.sendFile(path.join(__dirname, '../../build', 'index.html'));
+    });
+
+  })
+    // Show a message when backend is running
+    app.listen(port, () => console.log(`Listening on port ${port}!`));
