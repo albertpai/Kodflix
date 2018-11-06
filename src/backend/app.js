@@ -1,9 +1,8 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-// const shows = require('./rest/shows.js');
-const port = process.env.PORT || 3001;
 const db = require('./db.js');
+const port = process.env.PORT || 3001;
 
 // Connect backend to database
 db.connect()
@@ -16,7 +15,6 @@ db.connect()
       });
     })
 
-
     // Serve any static files   
     app.use(express.static(path.join(__dirname, '../../build')));
 
@@ -25,6 +23,6 @@ db.connect()
       res.sendFile(path.join(__dirname, '../../build', 'index.html'));
     });
 
-  })
     // Show a message when backend is running
     app.listen(port, () => console.log(`Listening on port ${port}!`));
+  });
