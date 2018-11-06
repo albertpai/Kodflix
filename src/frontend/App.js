@@ -5,7 +5,7 @@ import Gallery from './Gallery/Gallery.js';
 import Details from './Details/Details.js';
 import NotFound from './NotFound/NotFound.js';
 
-// The same as  exort defailt App;
+// The same as export default App;
 export default class App extends React.Component {
 
   constructor(props) {
@@ -14,7 +14,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('rest/shows')
+    fetch('/rest/shows')
       .then(res => res.json())
       .then(shows => {
         this.setState({ shows })

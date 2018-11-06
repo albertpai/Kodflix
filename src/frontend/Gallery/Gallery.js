@@ -6,17 +6,13 @@ import './Gallery.css';
 export default class Gallery extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            showGallery: []
-        };
+        this.state = { showGallery: [] };
     }
 
     componentDidMount() {
         fetch('/rest/shows')
             .then(res => res.json())
-            .then(showGallery => {
-                this.setState({ showGallery });
-            });
+            .then(showGallery => this.setState({ showGallery }));
     }
 
     render() {
@@ -27,7 +23,7 @@ export default class Gallery extends React.Component {
                     <div className="gallery-container">
                         {showGallery.map(show => (
                             <Poster id={show.id} title={show.title}
-                            alt={show.alt} key={show.id}
+                                alt={show.alt} key={show.id}
                             />
                         ))}
                     </div>

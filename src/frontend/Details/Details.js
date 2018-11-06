@@ -7,11 +7,11 @@ import './Details.css';
 export default class Details extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { showDetails: {} }
+        this.state = { showDetails: {} };
     }
 
     componentDidMount() {
-        fetch('rest/shows')
+        fetch('/rest/shows')
             .then(res => res.json())
             .then(shows => {
                 let urlId = this.props.match.params.id;
